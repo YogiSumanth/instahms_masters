@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="6129" started-at="2019-07-25T10:16:22Z" finished-at="2019-07-25T10:16:28Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="6129" started-at="2019-07-25T10:16:22Z" finished-at="2019-07-25T10:16:28Z">
+      <class name="com.instahmsmasters.testcases.TC_001_Login">
+        <test-method status="PASS" signature="OpenApp()[pri:0, instance:com.instahmsmasters.testcases.TC_001_Login@685cb137]" name="OpenApp" is-config="true" duration-ms="5162" started-at="2019-07-25T10:16:22Z" finished-at="2019-07-25T10:16:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenApp -->
+        <test-method status="PASS" signature="LoginPage()[pri:0, instance:com.instahmsmasters.testcases.TC_001_Login@685cb137]" name="LoginPage" duration-ms="714" started-at="2019-07-25T10:16:27Z" finished-at="2019-07-25T10:16:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginPage -->
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:com.instahmsmasters.testcases.TC_001_Login@685cb137]" name="closeApp" is-config="true" duration-ms="221" started-at="2019-07-25T10:16:28Z" finished-at="2019-07-25T10:16:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- com.instahmsmasters.testcases.TC_001_Login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
