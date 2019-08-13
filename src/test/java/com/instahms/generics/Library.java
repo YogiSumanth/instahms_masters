@@ -5,8 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
@@ -38,13 +36,20 @@ public class Library implements IAutoConstant {
 		}
 		return rowCount;
 	}
-	public static String getCellValue(String EXCEL_PATH,String Sheet,int row,int Column){
-		String value = "";
-		try {
-				wb = WorkbookFactory.create(new FileInputStream(EXCEL_PATH)); 
-		} catch (Exception e) {
-			
-		}
+	public static String getCellValue(String EXCEL_PATH,String Sheet,int row,int Column) throws IOException{
+		FileInputStream fileInputStream = new FileInputStream(EXCEL_PATH);
+		 String value="";
+		 try {
+		   
+		   wb = WorkbookFactory.create(fileInputStream);
+		   value = wb.getSheet(Sheet).getRow(row).getCell(Column).getStringCellValue();
+		  // return value;
+		   
+		 } catch (Exception e) {
+		  
+		 }
+		 wb.close();
+		 fileInputStream.close();
 		return value;
 	}
 }

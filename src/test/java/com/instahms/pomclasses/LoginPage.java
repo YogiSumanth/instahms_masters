@@ -2,7 +2,6 @@ package com.instahms.pomclasses;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -22,6 +21,9 @@ public class LoginPage {
 	@FindBy(id = "forgot_password")
 	private WebElement forgotPassword;
 	
+	@FindBy(linkText = "Remind Me Later")
+	private WebElement remindMeLater;
+	
 	//Initialization
 	public LoginPage(WebDriver driver){
 		PageFactory.initElements(driver,this);
@@ -37,5 +39,8 @@ public class LoginPage {
 	}
 	public void clickLogin(){
 		loginBtn.click();
+	}
+	public void remindMeLater(){
+		remindMeLater.click();
 	}
 }

@@ -19,7 +19,7 @@ public class TestListener implements ITestListener {
 	@Override
 	public void onTestFailure(ITestResult result) {
 	String testmethodName = result.getName();
-	b.takeScreenshot("TC_001_Login");
+	b.takeScreenshot("TC_001");
 	}
 	@Override
 	public void onTestSkipped(ITestResult result) {

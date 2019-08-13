@@ -3,7 +3,7 @@ package com.instahms.generics;
 public interface IAutoConstant 
 {
 	String CONFIG_PATH = "/home/ubuntu/workspace_nmc/instahms_masters/configuration.Properties";
-	String EXCEL_PATH = "/home/ubuntu/Documents/DataFolder/DataSheet.xls";
+	String EXCEL_PATH = "/home/ubuntu/workspace_nmc/instahms_masters/src/test/java/com/instahms/testdata/DataSheet.xls";
 	String CHROME_KEY = "webdriver.chrome.driver";
 	String CHROME_VALUE = "/home/ubuntu/Downloads/drivers/chromedriver";
 	

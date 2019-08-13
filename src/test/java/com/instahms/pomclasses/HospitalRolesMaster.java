@@ -5,14 +5,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HospitalRolesMaster {
-	@FindBy(linkText = "Hospital Admin Masters")
-	private WebElement hospAdminLink;
+import com.instahms.generics.BaseClass;
+
+public class HospitalRolesMaster{
 	
+	@FindBy(linkText = "Add New Hospital Role")
+	private WebElement AddNewHospRole;
+
+	@FindBy(xpath = "//span[text()='Hospital Admin Masters']")
+	private WebElement hospAdminLink;
+
 	@FindBy(linkText = "Hospital Roles Master")
 	private WebElement HospRolesMaster;
 	
-	@FindBy(id = "toolbarAction_defaultEdit")
+	@FindBy(id = "hosp_role_name")
+		private WebElement hospRoleName;
+	@FindBy(xpath = "//button[@type='submit']")
+	private WebElement saveButton;
+	
+	/*@FindBy(id = "toolbarAction_defaultEdit")
 	private WebElement ViewAndEditButton;
 	
 	@FindBy(linkText="Cosmetology")
@@ -43,18 +54,32 @@ public class HospitalRolesMaster {
 	private WebElement RespTherapistLink;
 	
 	@FindBy(linkText = "Speech Therapist")
-	private WebElement SpeechTherapistLink;
+	private WebElement SpeechTherapistLink;*/
 	
 	public HospitalRolesMaster (WebDriver driver){
 		PageFactory.initElements(driver, this);
 	}
-	public void ClickHospAdminMasters() {
+	public void ClickHospAdmin(){
 		hospAdminLink.click();
 	}
 	public void ClickHospRolesMaster() {
 		HospRolesMaster.click();
 	}
-	public void ClickViewOrEdit() {
-		ViewAndEditButton.click();
+	/*//public void ClickCosmetology(){
+		//CosmetologyLink.click();
+//}
+	//public void ClickViewOrEdit() {
+		//ViewAndEditButton.click();
+	//}
+*/
+	public void ClickAddNewRole(){
+		AddNewHospRole.click();
+	
+	}
+	public void EnterText(){
+		hospRoleName.sendKeys(new BaseClass().getRandomValue());
+		}
+	public void Save(){
+		saveButton.submit();
 	}
 }
