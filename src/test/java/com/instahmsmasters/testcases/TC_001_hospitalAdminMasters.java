@@ -1,11 +1,14 @@
 package com.instahmsmasters.testcases;
 
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import com.instahms.generics.BaseClass;
-import com.instahms.pomclasses.HospitalRolesMaster;
 
-public class TC_001 extends BaseClass
+import com.instahms.generics.BaseClass;
+import com.instahms.generics.TestListener;
+import com.instahms.pomclasses.HospitalRolesMaster;
+@Listeners(TestListener.class)
+public class TC_001_hospitalAdminMasters extends BaseClass
 	{
 		@Test
 		public void HospitalRoles() throws InterruptedException{
@@ -19,5 +22,6 @@ public class TC_001 extends BaseClass
 		    hrm.ClickAddNewRole();
 		    hrm.EnterText();
 		    hrm.Save();
-			}
+		    
+		    }
 	}

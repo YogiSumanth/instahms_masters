@@ -6,7 +6,9 @@
 </listeners>
   <test thread-count="5" name="Test">
   <classes>
-  <class name = "com.instahmsmasters.testcases.TC_001"/>
+  <class name = "com.instahmsmasters.testcases.TC_001_hospitalAdminMasters"/>
+  <class name = "com.instahmsmasters.testcases.TC_002_departmentMaster"/>
+   <class name = "com.instahmsmasters.testcases.TC_003_dischargeTypes"/>
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

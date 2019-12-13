@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.instahmsmasters.testcases.TC_001">
+      <class name="com.instahmsmasters.testcases.TC_002_departmentMaster">
         <methods>
           <include name="OpenAppAndLogin"/>
-          <include name="HospitalRoles"/>
+          <include name="department"/>
           <include name="closeApp"/>
         </methods>
-      </class> <!-- com.instahmsmasters.testcases.TC_001 -->
+      </class> <!-- com.instahmsmasters.testcases.TC_002_departmentMaster -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,7 +1,12 @@
 package com.instahms.pomclasses;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import com.instahms.generics.BaseClass;
 
 public class DepartmentMaster{
 	@FindBy(xpath = "//span[text()='Hospital Admin Masters']")
@@ -49,5 +54,64 @@ public class DepartmentMaster{
 	@FindBy(name="default_followup_in_consultation_haad")
 	private WebElement defaultFollowUpConsultation;
 	
+	@FindBy(name = "default_first_out_consultation_dha")
+	private WebElement defaultOutConsultationDha;
 	
-}
+	@FindBy(name = "default_followup_out_consultation_dha")
+	private WebElement defaultFollowUpDha;
+	
+	@FindBy(name = "default_first_in_consultation_dha")
+	private WebElement defaultInConsultationDha;
+	
+	@FindBy(name = "default_followup_in_consultation_dha")
+	private WebElement defaultFollowUpInDha;
+	
+	@FindBy(xpath = "//button[@type='submit']")
+	private WebElement saveButton;
+	
+	
+	
+	public DepartmentMaster(WebDriver driver){
+		PageFactory.initElements(driver, this);
+	}
+	
+	public void hospAdminClick(){
+		hospAdminLink.click();
+	}
+	public void ClickDept(){
+		deptLink.click();
+	}
+	public void AddNewDept(){
+		addNewDept.click();
+	}
+	public void EnterName() {
+		new BaseClass();
+		nameField.sendKeys(BaseClass.value());
+	}
+	public void selectDeptDropDown() {
+		Select sdd = new Select(deptTypeDropDown);
+		sdd.selectByVisibleText("Dental");
+	}
+	public void selectGender(){
+		Select sg = new Select(genderDropDown);
+		sg.selectByVisibleText("All");
+	}
+	public void EnterCentreCode(){
+		new BaseClass();
+		costCenterCode.sendKeys(BaseClass.value());
+	}
+	public void selectExamOrgenCategory(){
+		examOrganCategory.click();
+	}
+	public void selectClinicalInfo() {
+		Select sci = new Select(clinicalInfoForm);
+		sci.selectByVisibleText("Clinical Information - Wet Mount");
+	}
+	public void selectAppDeptName(){
+		Select sadn = new Select(appDeptName);
+		sadn.selectByValue("Anaesthesiology");
+	}
+	public void clickAndSave() {
+		saveButton.click();
+	}
+}	

@@ -12,6 +12,6 @@ public interface IAutoConstant
 	
 	//String URL = "http://10.8.55.122/instanmc/loginForm.do";
 	//String USERNAME = "Yogi_Sumanth";
-	//String PASSWORD = "Lucifer@12";
+	//String PASSWORD = Lucipher@24";
 	
 }

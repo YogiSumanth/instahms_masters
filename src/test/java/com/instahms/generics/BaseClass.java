@@ -3,6 +3,7 @@ package com.instahms.generics;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -14,8 +15,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
 import com.instahms.pomclasses.HomePage;
 import com.instahms.pomclasses.LoginPage;
+
 
 public class BaseClass implements IAutoConstant{
 	public static WebDriver driver;
@@ -53,7 +56,7 @@ public class BaseClass implements IAutoConstant{
 		l.clickLogin();
 		//Thread.sleep(2000);
 		
-		l.remindMeLater();
+		//l.remindMeLater();
 		//Thread.sleep(3000);
 		
 		HomePage homePage = new HomePage(driver);
@@ -74,7 +77,7 @@ public class BaseClass implements IAutoConstant{
 		String currentdate = d.toString().replaceAll(":", "_");
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File srcFile = ts.getScreenshotAs(OutputType.FILE);
-		File destFile = new File("/home/ubuntu/workspace_nmc/instahms_masters/screenshots"+currentdate+"\\"+testname+"_screenshot.png");
+		File destFile = new File("/home/ubuntu/workspace_nmc/instahms_masters/screenshots/"+currentdate+"\\"+testname+"_screenshot.png");
 		try {
 		FileUtils.copyFile(srcFile, destFile);
 		} catch (IOException e) {
@@ -82,36 +85,38 @@ public class BaseClass implements IAutoConstant{
 		}
 		}
 		
-	    // function to generate a random string of length n 
-	    static String getAlphaNumericString(int n) 
-	    { 
+	public static String value(){
+		String St = "TC_00";
+		int i = 1;
+		for(i=0;i<=5;i++){
+			System.out.println(St+i);
+		}
+		return St+i;
+	}
+	 public int getRandomNumbers()
+	    {  
+	        Random rand = new Random(); 
+	   
+	        int rand_int = rand.nextInt(1000000000); 
+	        //int rand_int2 = rand.nextInt(1000); 
 	  
-	        // chose a Character random from this String 
-	        String AlphaNumericString = "KLOHJSIKSS"
-	                                    + "56789"
-	                                    + "hskkalss"; 
+	        
+	        System.out.println("Random Integers: "+rand_int); 
+	        //System.out.println("Random Integers: "+rand_int2);
 	  
-	        // create StringBuffer size of AlphaNumericString 
-	        StringBuilder sb = new StringBuilder(n); 
-	  
-	        for (int i = 0; i < n; i++) { 
-	  
-	            // generate a random number between 
-	            // 0 to AlphaNumericString variable length 
-	            int index 
-	                = (int)(AlphaNumericString.length() 
-	                        * Math.random()); 
-	  
-	            // add Character one by one in end of sb 
-	            sb.append(AlphaNumericString 
-	                          .charAt(index)); 
-	        } 
-	  
-	        return sb.toString(); 
-	    } 
-	 public String getRandomValue(){
-		 return BaseClass.getAlphaNumericString(7);
-	 }
-}
+	        return rand_int;
+	    }
+	 public String getNames(){
+			    Random r = new Random();
+
+			    String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";{
+			    for (int i = 0; i < 1; i++) 
+			    	{
+			        	System.out.println(alphabet.charAt(r.nextInt(alphabet.length())));
+			    	}
+			    }
+				return alphabet;
+			}
+		}
 
 

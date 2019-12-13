@@ -77,7 +77,7 @@ public class HospitalRolesMaster{
 	
 	}
 	public void EnterText(){
-		hospRoleName.sendKeys(new BaseClass().getRandomValue());
+		hospRoleName.sendKeys(new BaseClass().value());
 		}
 	public void Save(){
 		saveButton.submit();

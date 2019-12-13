@@ -15,11 +15,10 @@ public class TestListener implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		System.out.println("The name of the testcase passed is :"+result.getName());
 	}
-	@SuppressWarnings("unused")
 	@Override
 	public void onTestFailure(ITestResult result) {
 	String testmethodName = result.getName();
-	b.takeScreenshot("TC_001");
+	b.takeScreenshot(testmethodName);
 	}
 	@Override
 	public void onTestSkipped(ITestResult result) {
