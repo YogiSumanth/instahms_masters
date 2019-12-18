@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9251" started-at="2019-08-23T06:06:18Z" finished-at="2019-08-23T06:06:27Z">
+  <suite name="Default suite" duration-ms="17561" started-at="2019-12-18T13:41:25Z" finished-at="2019-12-18T13:41:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9251" started-at="2019-08-23T06:06:18Z" finished-at="2019-08-23T06:06:27Z">
-      <class name="com.instahmsmasters.testcases.TC_003_dischargeTypes">
-        <test-method status="PASS" signature="OpenAppAndLogin()[pri:0, instance:com.instahmsmasters.testcases.TC_003_dischargeTypes@e25b2fe]" name="OpenAppAndLogin" is-config="true" duration-ms="6703" started-at="2019-08-23T06:06:18Z" finished-at="2019-08-23T06:06:25Z">
+    <test name="Default test" duration-ms="17561" started-at="2019-12-18T13:41:25Z" finished-at="2019-12-18T13:41:42Z">
+      <class name="com.Settings.InstaMasters.instahmsmasters.testcases.TC_003_dischargeTypes">
+        <test-method status="PASS" signature="OpenAppAndLogin()[pri:0, instance:com.Settings.InstaMasters.instahmsmasters.testcases.TC_003_dischargeTypes@e25b2fe]" name="OpenAppAndLogin" is-config="true" duration-ms="14253" started-at="2019-12-18T13:41:25Z" finished-at="2019-12-18T13:41:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenAppAndLogin -->
-        <test-method status="PASS" signature="createDischargeType()[pri:1, instance:com.instahmsmasters.testcases.TC_003_dischargeTypes@e25b2fe]" name="createDischargeType" duration-ms="2368" started-at="2019-08-23T06:06:25Z" finished-at="2019-08-23T06:06:27Z">
+        <test-method status="PASS" signature="createDischargeType()[pri:1, instance:com.Settings.InstaMasters.instahmsmasters.testcases.TC_003_dischargeTypes@e25b2fe]" name="createDischargeType" duration-ms="2987" started-at="2019-12-18T13:41:39Z" finished-at="2019-12-18T13:41:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDischargeType -->
-        <test-method status="PASS" signature="closeApp()[pri:0, instance:com.instahmsmasters.testcases.TC_003_dischargeTypes@e25b2fe]" name="closeApp" is-config="true" duration-ms="126" started-at="2019-08-23T06:06:27Z" finished-at="2019-08-23T06:06:27Z">
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:com.Settings.InstaMasters.instahmsmasters.testcases.TC_003_dischargeTypes@e25b2fe]" name="closeApp" is-config="true" duration-ms="219" started-at="2019-12-18T13:41:42Z" finished-at="2019-12-18T13:41:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-      </class> <!-- com.instahmsmasters.testcases.TC_003_dischargeTypes -->
+      </class> <!-- com.Settings.InstaMasters.instahmsmasters.testcases.TC_003_dischargeTypes -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

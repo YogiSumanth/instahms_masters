@@ -1,9 +1,9 @@
-package com.instahmsmasters.testcases;
+package com.Settings.InstaMasters.instahmsmasters.testcases;
 
 import org.testng.annotations.Test;
 
+import com.Settings.InstaMasters.instahmsmasters.pomclasses.DepartmentMaster;
 import com.instahms.generics.BaseClass;
-import com.instahms.pomclasses.DepartmentMaster;
 
 public class TC_002_departmentMaster extends BaseClass{
 	@Test

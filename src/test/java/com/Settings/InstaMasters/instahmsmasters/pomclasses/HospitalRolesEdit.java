@@ -1,32 +1,23 @@
-package com.instahms.pomclasses;
+package com.Settings.InstaMasters.instahmsmasters.pomclasses;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
-import com.instahms.generics.BaseClass;
-
-public class HospitalRolesMaster{
+public class HospitalRolesEdit {
 	
-	@FindBy(linkText = "Add New Hospital Role")
-	private WebElement AddNewHospRole;
-
 	@FindBy(xpath = "//span[text()='Hospital Admin Masters']")
 	private WebElement hospAdminLink;
 
 	@FindBy(linkText = "Hospital Roles Master")
 	private WebElement HospRolesMaster;
 	
-	@FindBy(id = "hosp_role_name")
-		private WebElement hospRoleName;
-	@FindBy(xpath = "//button[@type='submit']")
-	private WebElement saveButton;
-	
-	/*@FindBy(id = "toolbarAction_defaultEdit")
+	@FindBy(xpath = "//div[text() = 'View/Edit']")
 	private WebElement ViewAndEditButton;
 	
-	@FindBy(linkText="Cosmetology")
+	@FindBy(xpath = "//*[@id='toolbarRow0']/td[3]/label")
 	private WebElement CosmetologyLink;
 	
 	@FindBy(id = "hosp_role_name")
@@ -54,32 +45,43 @@ public class HospitalRolesMaster{
 	private WebElement RespTherapistLink;
 	
 	@FindBy(linkText = "Speech Therapist")
-	private WebElement SpeechTherapistLink;*/
+	private WebElement SpeechTherapistLink; 
 	
-	public HospitalRolesMaster (WebDriver driver){
+	@FindBy(id = "hosp_role_name")
+	private WebElement hospRoleName;
+	
+	@FindBy(id = "status")
+	private WebElement statusDropDown;
+	
+	@FindBy(xpath = "//button[@type='submit']")
+	private WebElement saveButton;
+	
+	
+	public HospitalRolesEdit(WebDriver driver)
+	{
 		PageFactory.initElements(driver, this);
 	}
+	
 	public void ClickHospAdmin(){
 		hospAdminLink.click();
 	}
 	public void ClickHospRolesMaster() {
 		HospRolesMaster.click();
 	}
-	/*//public void ClickCosmetology(){
-		//CosmetologyLink.click();
-//}
-	//public void ClickViewOrEdit() {
-		//ViewAndEditButton.click();
-	//}
-*/
-	public void ClickAddNewRole(){
-		AddNewHospRole.click();
-	
-	}
-	public void EnterText(){
-		hospRoleName.sendKeys(new BaseClass().value());
+	public void ClickCosmetology(){
+		CosmetologyLink.click();
 		}
+	public void ClickViewOrEdit() {
+		ViewAndEditButton.click();
+		}
+	public void EditRoleName(){
+		HospitalRoleName.sendKeys("Edit");
+	}
+	public void EditRoleStatus(){
+		Select ern = new Select(RoleStatus);
+		ern.selectByValue("I");
+	}
 	public void Save(){
-		saveButton.submit();
+			saveButton.submit();
 	}
 }

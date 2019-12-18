@@ -1,4 +1,4 @@
-package com.instahms.pomclasses;
+package com.Settings.InstaMasters.instahmsmasters.pomclasses;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -41,7 +41,7 @@ public class DischargeTypes {
 		newDischargeType.click();
 	}
 	public void enterName(){
-		enterName.sendKeys(new BaseClass().value());
+		enterName.sendKeys(new BaseClass().getNames());
 	}
 	public void encounterEndType(){
 		Select seet = new Select(encounterEndType);

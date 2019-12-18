@@ -16,8 +16,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import com.instahms.pomclasses.HomePage;
-import com.instahms.pomclasses.LoginPage;
+import com.Quicklinks.pomclasses.LoginPage;
+import com.Settings.InstaMasters.instahmsmasters.pomclasses.HomePage;
 
 
 public class BaseClass implements IAutoConstant{
@@ -93,7 +93,7 @@ public class BaseClass implements IAutoConstant{
 		}
 		return St+i;
 	}
-	 public int getRandomNumbers()
+	 public Integer getRandomNumbers()
 	    {  
 	        Random rand = new Random(); 
 	   
@@ -107,16 +107,30 @@ public class BaseClass implements IAutoConstant{
 	        return rand_int;
 	    }
 	 public String getNames(){
-			    Random r = new Random();
+		    Random r = new Random();
 
-			    String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";{
-			    for (int i = 0; i < 1; i++) 
-			    	{
-			        	System.out.println(alphabet.charAt(r.nextInt(alphabet.length())));
-			    	}
-			    }
-				return alphabet;
-			}
+		    String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";{
+		    for (int i = 0; i < 1; i++) 
+		    	{
+		        	System.out.println("Regression"+ " " +alphabet.charAt(r.nextInt(alphabet.length())));
+		        	alphabet = "Regression"+ " " +alphabet.charAt(r.nextInt(alphabet.length()));
+		    	}
+		    }
+			return alphabet;
 		}
+	 public Integer getShortRandomNumbers()
+	    {  
+	        Random rand = new Random(); 
+	   
+	        int rand_int = rand.nextInt(100); 
+	        //int rand_int2 = rand.nextInt(1000); 
+	  
+	        
+	        System.out.println("Random Integers: "+rand_int); 
+	        //System.out.println("Random Integers: "+rand_int2);
+	  
+	        return rand_int;
+	    }
+}
 
 

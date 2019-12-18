@@ -1,4 +1,4 @@
-package com.instahms.pomclasses;
+package com.Quicklinks.pomclasses;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

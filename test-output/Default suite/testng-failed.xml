@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.instahms.generics.RegPage">
+      <class name="com.instahmsmasters.testcases.TC_005_CreateDiagDepartments">
         <methods>
           <include name="OpenAppAndLogin"/>
-          <include name="Registration"/>
+          <include name="createDiagMaster"/>
           <include name="closeApp"/>
         </methods>
-      </class> <!-- com.instahms.generics.RegPage -->
+      </class> <!-- com.instahmsmasters.testcases.TC_005_CreateDiagDepartments -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

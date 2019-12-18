@@ -1,9 +1,9 @@
-package com.instahmsmasters.testcases;
+package com.Settings.InstaMasters.instahmsmasters.testcases;
 
 import org.testng.annotations.Test;
 
+import com.Settings.InstaMasters.instahmsmasters.pomclasses.DischargeTypes;
 import com.instahms.generics.BaseClass;
-import com.instahms.pomclasses.DischargeTypes;
 
 public class TC_003_dischargeTypes extends BaseClass {
 	@Test(priority=1)

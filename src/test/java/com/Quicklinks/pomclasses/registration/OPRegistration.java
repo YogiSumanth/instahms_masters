@@ -1,4 +1,4 @@
-package com.instahms.pomclasses;
+package com.Quicklinks.pomclasses.registration;
 
 import java.io.IOException;
 
